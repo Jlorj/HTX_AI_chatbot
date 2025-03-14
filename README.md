@@ -30,7 +30,9 @@ This project is a chatbot application designed to answer queries related to the 
     npm install
 ```
 
-3. Create your (Datastax)[https://www.datastax.com/] account 
+3. Create your [Datastax](https://www.datastax.com/) account
+- Click on `Create Database` and fill in the necessary fields
+- Copy the `API Endpoint`, `Application Token` and `keyspace` (under Data Explorer) for the environment variables later
 
 4. Create Environment Variables File:
 Create a `.env` file in the root directory of the project. To make it easier for others to set up the environment, an `.env.example` file is provided:
