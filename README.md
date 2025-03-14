@@ -41,7 +41,7 @@ This project is a chatbot application designed to answer queries related to the 
 4. Place all local PDF files in the `./documents` directory.
 
 ## Running the Application Locally
-1. 
+1. Start the application:
 ```bash
     npm run dev
 ```
