@@ -27,6 +27,7 @@ export async function POST(req: Request) {
 
         let docContext = "";
 
+        //  Text embeddings
         const embedding = await openAI.embeddings.create({
             model: "text-embedding-ada-002",
             input: latestMessage,

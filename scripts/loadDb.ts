@@ -5,7 +5,6 @@ import { RecursiveCharacterTextSplitter } from "langchain/text_splitter";
 
 import { readFileSync } from "fs";
 import pdfParse from "pdf-parse";
-// import axios from "axios";
 import "dotenv/config";
 
 type SimilarityMetric = "dot_product" | "cosine" | "euclidean";
@@ -71,7 +70,7 @@ const splitter = new RecursiveCharacterTextSplitter({
 const createCollection = async(similarityMetric: SimilarityMetric = "cosine") => {
     const res = await db.createCollection(ASTRA_DB_COLLECTION!, {
         vector: {
-            dimension: 1536,
+            dimension: 1536, // dimensions must be the same as the text-embedding model
             metric: similarityMetric,
         }
     })
