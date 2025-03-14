@@ -26,23 +26,30 @@ const Home = () => {
   return (
     <div className="grid grid-rows items-center justify-items-center min-h-screen p-8 pb-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src={budget2024_logo_nobg}
-          alt="Budget 2024 logo"
-          width={800}
-          height={420}
-          priority
-        />
+
         <section className={noMessages ? "" : "populated"}>
           {noMessages ? (
             <>
+            <div className="flex flex-col items-center">
+              <div className="flex flex-row items-center justify-items-center">
+                  <Image
+                  className="dark:invert"
+                  src={budget2024_logo_nobg}
+                  alt="Budget 2024 logo"
+                  width={600}
+                  height={320}
+                  priority
+                />
+                <p className="text-[80px] ml-[-120px] mr-[120px]">|</p>
+                <p className="text-[80px] ml-[-100px] mr-[120px]">GPT</p>
+              </div>
               <p className="starter-text text-center">
                 Ask me about any topics related to Singapore’s Finance Minister’s Budget 2024! 🇸🇬<br />
                 Please refrain from any other questions aside from the Singapore Budget.
               </p>
               <br />
               <PromptSuggestionsRow onPromptClick={handlePrompt}/>
+              </div>
             </>
           ) : (
             <>
@@ -56,8 +63,8 @@ const Home = () => {
           <button type="submit" className="submit-button">→</button>
         </form>
       </main>
-      {/* <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-      </footer> */}
+      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
+      </footer>
     </div>
   );
 }
