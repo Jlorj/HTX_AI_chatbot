@@ -56,13 +56,13 @@ npm run seed
 ## Running the Application Locally
 1. Start the application:
 ```bash
-    npm run dev
+npm run dev
 ```
 2. Access the application at http://localhost:3000.
 
 ## Running with Docker (ensure you have Docker installed)
 1. Build and run the application:
 ```bash
-    docker-compose up --build
+docker-compose up --build
 ```
 2. Access the application at http://localhost:3000.
