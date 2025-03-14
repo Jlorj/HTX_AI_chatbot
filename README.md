@@ -30,7 +30,7 @@ This project is a chatbot application designed to answer queries related to the 
     npm install
 ```
 
-3. Create your [Datastax](https://www.datastax.com/) account
+3. Create your [Datastax](https://www.datastax.com/) account:
 - Click on `Create Database` and fill in the necessary fields
 - Copy the `API Endpoint`, `Application Token` and `keyspace` (under Data Explorer) for the environment variables later
 
@@ -38,11 +38,15 @@ This project is a chatbot application designed to answer queries related to the 
 > **Note:** Never share your `.env` file or commit it to your GitHub repository. Ensure `.env` is added to your `.gitignore` file.
 
 To copy the example environment file and prepare your `.env` file, run:
-```
+```bash
 cp .env.example .env
 ```
 
-5. Ensure you have the local PDF files in the `./documents` directory.
+5. Store files in AstraDB for contextual information:
+```bash
+npm run seed
+```
+This process might take a while
 
 ## Running the Application Locally
 1. Start the application:
