@@ -36,7 +36,7 @@ Create a .env file in the root directory with the following:
 
 Place all local PDF files in the ./documents directory.
 
-Running the Application Locally
+## Running the Application Locally
 
     npm run dev
 
