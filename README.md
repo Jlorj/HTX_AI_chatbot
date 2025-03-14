@@ -16,7 +16,7 @@ This project is a chatbot application designed to answer queries related to the 
 - External APIs: OpenAI API for embeddings and text generation.
 
 ## Requirements
-- Node.js 22 & npm
+- Node.js (v22.14.0) & npm
 - Docker (for containerization)
 - Datastax account
 - OpenAI account
