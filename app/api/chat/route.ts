@@ -72,7 +72,6 @@ export async function POST(req: Request) {
 
         const response = await streamText({
             model: openai("gpt-4"),
-            // stream: true,
             messages: [template, ...messages]
         })
         
