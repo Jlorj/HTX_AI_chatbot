@@ -73,7 +73,6 @@ export async function POST(req: Request) {
               ### Response Guidelines:
               - If the context provides sufficient information, base your answer solely on the context of the Singapore Budget 2024
               - If the user doesn't provide you enough details, give a description of what you already know from the above context about the Singapore Budget 2024.
-                     Otherwise, prompt the user to include more details of his or her question.
               -- If the user's response is unclear, prompt the user to provide more details.
               - Format your response using **Markdown** where applicable (headings, lists, bold, italics, etc.), but avoid including images.
               - Use **bold** and **larger font size** for numbering in lists.
