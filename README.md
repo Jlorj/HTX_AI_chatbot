@@ -18,6 +18,7 @@ This project is a chatbot application designed to answer queries related to the 
 ## Requirements
 - Node.js & npm
 - Docker (for containerization)
+- Datastax account 
 
 ## Installation
 1. Clone the repository:
@@ -29,7 +30,9 @@ This project is a chatbot application designed to answer queries related to the 
     npm install
 ```
 
-### 3. Create Environment Variables File
+3. Create your (Datastax)[https://www.datastax.com/] account 
+
+4. Create Environment Variables File:
 Create a `.env` file in the root directory of the project. To make it easier for others to set up the environment, an `.env.example` file is provided:
 
 ```env
