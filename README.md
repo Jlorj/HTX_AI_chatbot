@@ -20,7 +20,7 @@ Docker (for containerization)
 
 Clone the repository:
 
-    git clone [<repo_url>](https://github.com/Jlorj/HTX_AI_chatbot.git)
+    git clone https://github.com/Jlorj/HTX_AI_chatbot.git
 
 Install dependencies:
 
