@@ -35,7 +35,7 @@ This project is a chatbot application designed to answer queries related to the 
 - Click on `Create Database` and fill in the necessary fields
 - Copy the `API Endpoint`, `Application Token` and `keyspace` (under Data Explorer)
 
-4. Create your OpenAPI account:
+4. Create your [OpenAI](https://auth.openai.com/log-in) account:
 - Ensure that you have sufficient credits in your account
 - Create and copy the `API Key` 
 
