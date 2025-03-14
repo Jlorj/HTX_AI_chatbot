@@ -47,15 +47,10 @@ This project is a chatbot application designed to answer queries related to the 
 ```
 2. Access the application at http://localhost:3000.
 
-## Building and Running with Docker
-1. Build the Docker image:
+## Running with Docker (ensure you have Docker installed)
+1. Run the application
 ```bash
-    docker build -t htx-ai-chatbot .
-```
-
-2. Run the Docker container:
-```bash
-    docker run -p 3000:3000 --env-file .env htx-ai-chatbot
+    docker-compose up --build
 ```
 
 ## Updating API Key
