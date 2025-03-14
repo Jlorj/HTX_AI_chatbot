@@ -15,7 +15,7 @@ This project is a chatbot application designed to answer queries related to the 
 - Database: Astra DB storing document embeddings for context retrieval.
 - External APIs: OpenAI API for embeddings and text generation.
 
-# RAG Architecture
+## RAG Architecture
 ![RAG architecture](https://github.com/Jlorj/HTX_AI_chatbot/blob/main/Architecture%20Design.jpg)
 
 ## Requirements
