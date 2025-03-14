@@ -61,7 +61,7 @@ To copy the example environment file and prepare your `.env` file, run:
 cp .env.example .env
 ```
 
-4. Ensure you have the local PDF files in the `./documents` directory.
+5. Ensure you have the local PDF files in the `./documents` directory.
 
 ## Running the Application Locally
 1. Start the application:
