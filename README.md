@@ -37,6 +37,9 @@ This project is a chatbot application designed to answer queries related to the 
 - Comprehensiveness: The inclusion of both web-scraped content and local PDF documents ensures a comprehensive dataset that covers various aspects of the Singapore Budget 2024.
 - User Experience: The use of Markdown formatting and the react-markdown library enhances the readability and structure of the responses, providing a better user experience.
 
+## Prompts Design
+The list of prompts used to interact with the LLM can be found [here](https://github.com/Jlorj/HTX_AI_chatbot/blob/main/Prompts%20Design.pdf)
+
 ## Requirements
 - Node.js (v22.14.0) & npm
 - Docker (for containerization)
