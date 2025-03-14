@@ -40,22 +40,7 @@ Running the Application Locally
 
     npm run dev
 
-Building and Running with Docker
-
-Create a Dockerfile in the root directory:
-
-    FROM node:18
-
-    WORKDIR /app
-
-    COPY package*.json ./
-    RUN npm install
-
-    COPY . .
-
-    EXPOSE 3000
-
-    CMD [ "npm", "run", "dev" ]
+## Building and Running with Docker
 
 Build the Docker image:
 
@@ -66,6 +51,6 @@ Run the Docker container:
     docker run -p 3000:3000 --env-file .env mas-teda-chatbot
 
 
-Updating API Key
+## Updating API Key
 
 To update the OpenAI API Key, modify the .env file and restart the application.
