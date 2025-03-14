@@ -41,12 +41,12 @@ To copy the example environment file and prepare your `.env` file, run:
 ```bash
 cp .env.example .env
 ```
+You can name the AstraDB collection name however you would like
 
-5. Store files in AstraDB for contextual information:
+5. Store files in AstraDB for contextual information (this process might take a while):
 ```bash
 npm run seed
 ```
-This process might take a while
 
 ## Running the Application Locally
 1. Start the application:
