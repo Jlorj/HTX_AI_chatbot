@@ -46,7 +46,7 @@ To copy the example environment file and prepare your `.env` file, run:
 ```bash
 cp .env.example .env
 ```
-You can name the AstraDB collection name however you would like
+*You can name the ASTRA_DB_COLLECTION however you would like
 
 6. Store files in AstraDB for contextual information (this process might take a while):
 ```bash
