@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# HTX Budget 2024 AI Chatbot
 
-## Getting Started
+This project is a chatbot application designed to answer queries related to the Singapore Budget 2024 using Retrieval-Augmented Generation (RAG). The application uses DataStax (Astra DB) for document storage and OpenAI's GPT-4 for response generation.
 
-First, run the development server:
+## Features
+- Retrieval of relevant information from online and local PDFs.
+- Vector-based similarity search using Astra DB.
+- Query processing and response generation using OpenAI GPT-4.
 
+## Requirements
+- Node.js & npm
+- Docker (for containerization)
+
+## Installation
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+    git clone <repo_url>
+```
+2. Install dependencies:
+```bash
+    npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. Create a `.env` file in the root directory with the following:
+```env
+    OPENAI_API_KEY=your_openai_api_key
+    ASTRA_DB_NAMESPACE=your_astra_db_namespace
+    ASTRA_DB_COLLECTION=your_astra_db_collection
+    ASTRA_DB_API_ENDPOINT=your_astra_db_api_endpoint
+    ASTRA_DB_APPLICATION_TOKEN=your_astra_db_application_token
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+4. Place all local PDF files in the `./documents` directory.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Running the Application Locally
+```bash
+    npm run dev
+```
 
-## Learn More
+## Building and Running with Docker
+1. Build the Docker image:
+```bash
+    docker build -t htx-ai-chatbot .
+```
 
-To learn more about Next.js, take a look at the following resources:
+2. Run the Docker container:
+```bash
+    docker run -p 3000:3000 --env-file .env htx-ai-chatbot
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Updating API Key
+To update the OpenAI API Key, modify the `.env` file and restart the application.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
