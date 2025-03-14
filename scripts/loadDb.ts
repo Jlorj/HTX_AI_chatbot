@@ -5,7 +5,7 @@ import { RecursiveCharacterTextSplitter } from "langchain/text_splitter";
 
 import { readFileSync } from "fs";
 import pdfParse from "pdf-parse";
-import axios from "axios";
+// import axios from "axios";
 import "dotenv/config";
 
 type SimilarityMetric = "dot_product" | "cosine" | "euclidean";
@@ -87,7 +87,7 @@ const scrapePage = async(url: string) => {
             waitUntil: "domcontentloaded"
         },
         evaluate: async (page, browser) => {
-            const result = await page.evaluate(() => document.body.innerText)
+            const result = await page.evaluate(() => document.body.innerHTML)
             await browser.close()
             return result
         }

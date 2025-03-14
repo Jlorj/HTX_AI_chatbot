@@ -1,9 +1,11 @@
+import ReactMarkdown from 'react-markdown';
+
 const Bubble = ({ message }) => {
     const { content, role } = message;
 
   return (
     <div className={`${role} bubble`}>
-      <p>{content}</p>
+      <ReactMarkdown>{content}</ReactMarkdown>
     </div>
   )
 };
