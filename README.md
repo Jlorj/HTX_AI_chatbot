@@ -18,7 +18,8 @@ This project is a chatbot application designed to answer queries related to the 
 ## Requirements
 - Node.js & npm
 - Docker (for containerization)
-- Datastax account 
+- Datastax account
+- OpenAI account
 
 ## Installation
 1. Clone the repository:
@@ -32,9 +33,13 @@ This project is a chatbot application designed to answer queries related to the 
 
 3. Create your [Datastax](https://www.datastax.com/) account:
 - Click on `Create Database` and fill in the necessary fields
-- Copy the `API Endpoint`, `Application Token` and `keyspace` (under Data Explorer) for the environment variables later
+- Copy the `API Endpoint`, `Application Token` and `keyspace` (under Data Explorer)
 
-4. Create Environment Variables File:
+4. Create your OpenAPI account:
+- Ensure that you have sufficient credits in your account
+- Create and copy the `API Key` 
+
+5. Create Environment Variables File:
 > **Note:** Never share your `.env` file or commit it to your GitHub repository. Ensure `.env` is added to your `.gitignore` file.
 
 To copy the example environment file and prepare your `.env` file, run:
@@ -43,7 +48,7 @@ cp .env.example .env
 ```
 You can name the AstraDB collection name however you would like
 
-5. Store files in AstraDB for contextual information (this process might take a while):
+6. Store files in AstraDB for contextual information (this process might take a while):
 ```bash
 npm run seed
 ```
