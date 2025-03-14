@@ -48,7 +48,7 @@ This project is a chatbot application designed to answer queries related to the 
 2. Access the application at http://localhost:3000.
 
 ## Running with Docker (ensure you have Docker installed)
-1. Run the application
+1. Build and run the application:
 ```bash
     docker-compose up --build
 ```
