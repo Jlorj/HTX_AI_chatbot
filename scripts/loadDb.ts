@@ -33,7 +33,6 @@ const localPdfs = [
     '/annexc1.pdf',
     '/annexc2.pdf',
     '/annexd1.pdf',
-    '/annexd2.pdf',
     '/annexe1.pdf',
     '/annexe2.pdf',
     '/annexf1.pdf',
