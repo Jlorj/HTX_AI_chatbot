@@ -33,7 +33,7 @@ This project is a chatbot application designed to answer queries related to the 
 
 3. Create your [Datastax](https://www.datastax.com/) account:
 - Click on `Create Database` and fill in the necessary fields
-- Copy the `API Endpoint`, `Application Token` and `keyspace` (under Data Explorer)
+- Copy the `API Endpoint` and `Application Token` (under Overview), and `keyspace` (under Data Explorer)
 
 4. Create your [OpenAI](https://auth.openai.com/log-in) account:
 - Ensure that you have sufficient credits in your account
