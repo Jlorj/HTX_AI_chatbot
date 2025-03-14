@@ -40,12 +40,12 @@ This project is a chatbot application designed to answer queries related to the 
 ## Building and Running with Docker
 1. Build the Docker image:
 ```bash
-    docker build -t mas-teda-chatbot .
+    docker build -t htx-ai-chatbot .
 ```
 
 2. Run the Docker container:
 ```bash
-    docker run -p 3000:3000 --env-file .env mas-teda-chatbot
+    docker run -p 3000:3000 --env-file .env htx-ai-chatbot
 ```
 
 ## Updating API Key
