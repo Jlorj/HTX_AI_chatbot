@@ -14,7 +14,7 @@ This project is a chatbot application designed to answer queries related to the 
 ## Installation
 1. Clone the repository:
 ```bash
-    git clone <repo_url>
+    git clone https://github.com/Jlorj/HTX_AI_chatbot.git
 ```
 2. Install dependencies:
 ```bash
