@@ -70,6 +70,3 @@ cp .env.example .env
 ```bash
     docker-compose up --build
 ```
-
-## Updating API Key
-To update the OpenAI API Key, modify the `.env` file and restart the application.
