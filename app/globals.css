@@ -21,6 +21,13 @@
   }
 }
 
+html {
+  height: 100%; 
+  margin: 0; 
+  padding: 0;
+  overflow-x: hidden; 
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
@@ -29,8 +36,8 @@ body {
   padding: 0;
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
+  /* align-items: center; */
+  /* min-height: 100vh; */
 }
 
 main {
@@ -53,11 +60,12 @@ section {
 }
 
 section.populated {
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: auto;
+  max-height: 60vh;  
 }
 
 .starter-text {
@@ -102,15 +110,24 @@ input:focus {
   font-size: 15px;
   border: none;
   color: #ffffff;
-  width: 80%;
+  /* width: 80%; */
   text-align: left;
 }
 
 .bubble.user {
-  border-radius: 20px;
+  display: inline-block;
+  max-width: 100%;
+  margin: 8px;
+  padding: 8px;
+  font-size: 15px;
+  border: none;
+  color: #ffffff;
   background-color: #3c414a;
+  border-radius: 12px;
+  word-wrap: break-word;
+  word-break: break-word;
   margin-left: auto;
-
+  text-align: right;
 }
 
 .bubble.assistant {
@@ -118,6 +135,11 @@ input:focus {
   width: 100%;
 }
 
+.loading-bubble {
+  display: flex;
+  justify-content: flex-start;
+  margin: 8px;
+}
 
 .prompt-suggestion-row {
   width: 100%;
@@ -135,22 +157,43 @@ input:focus {
   cursor: pointer;
 }
 
-.loader {
-  margin: 10px;
-  width: 60px;
-  aspect-ratio: 4;
-  background:
-    no-repeat radial-gradient(circle closest-side, #383838 90%, #0000) 0 50%,
-    no-repeat radial-gradient(circle closest-side, #383838 90%, #0000) 50% 50%,
-    no-repeat radial-gradient(circle closest-side, #383838 90%, #0000) 100% 50%
-  ;
-  background-size: calc(100%/3) 100%;
-  animation : loading 1s infinite linear;
-  color: #ffffff
+.spinner {
+  margin: 0;
+  width: 70px;
+  text-align: center;
 }
 
-@keyframes loading {
-  33% { background-size: calc(100%/3) 0%, calc(100%/3) 100%, calc(100%/3) 100%; }
-  50% { background-size: calc(100%/3) 100%, calc(100%/3) 0%, calc(100%/3) 100%; }
-  66% { background-size: calc(100%/3) 100%, calc(100%/3) 100%, calc(100%/3) 0%; }
+.spinner > div {
+  width: 12px;
+  height: 12px;
+  background-color: #cacaca;
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+  0%, 80%, 100% { -webkit-transform: scale(0) }
+  40% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bouncedelay {
+  0%, 80%, 100% { 
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  } 40% { 
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+  }
 }

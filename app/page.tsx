@@ -1,16 +1,16 @@
 "use client"
 
 import Image from "next/image";
-import { Message, useChat, useCompletion } from '@ai-sdk/react';
+import { Message, useChat, } from '@ai-sdk/react';
 import budget2024_logo_nobg from "./assets/budget2024_logo_nobg.png";
 import Bubble from "./components/Bubble";
 import LoadingBubble from "./components/LoadingBubble";
 import PromptSuggestionsRow from "./components/PromptSuggestionsRow";
 
-
 const Home = () => {
-  const { append, messages, input, handleInputChange, handleSubmit } = useChat();
-  const { isLoading } = useCompletion();
+  const { append, status, messages, input, handleInputChange, handleSubmit } = useChat();
+
+  const isLoading = status === "submitted" || status === "streaming";
 
   const noMessages = !messages || messages.length === 0;
 

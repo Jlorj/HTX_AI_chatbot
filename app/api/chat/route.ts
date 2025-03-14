@@ -17,7 +17,7 @@ const openAI= new OpenAI({
 
 const client = new DataAPIClient(ASTRA_DB_APPLICATION_TOKEN);
 
-const db = client.db(ASTRA_DB_API_ENDPOINT, { namespace: ASTRA_DB_NAMESPACE })
+const db = client.db(ASTRA_DB_API_ENDPOINT, { namespace: ASTRA_DB_NAMESPACE });
 
 export async function POST(req: Request) {
     try {
@@ -48,6 +48,8 @@ export async function POST(req: Request) {
 
             docContext = JSON.stringify(docsMap)
 
+            console.log(docContext)
+
         } catch (err) {
             console.log("Error querying db...")
             docContext = ""
@@ -55,20 +57,29 @@ export async function POST(req: Request) {
 
         const template = {
             role: "system", 
-            content: `You are an AI assistant who knows everything about the Singapore Budget 2024.
-            Use the below context to augment what you know about the Singapore Budget 2024.
-            The context will provide you with the information from the Singapore Budget 2024 website.
-            If the context doesn't include the information you need, answer based on your existing knowledge and mention the source of your information 
-            or what the context does or doesn't include.
-            Format responses using markdown where applicable and don't return images.
-            --------------------
-            START CONTEXT
-            ${docContext}
-            END CONTEXT
-            --------------------
-            QUESTION: ${latestMessage}
-            `
-        }
+            content: `
+          You are an AI assistant with expert knowledge of the Singapore Budget 2024.
+          
+          Use the information below to answer questions. If the context doesn't provide enough details, use your general knowledge but always mention the source of your information or acknowledge what is missing.
+          
+          ### Response Guidelines:
+          - If the context provides sufficient information, base your answer solely on it.
+          - If the context is lacking, fill in with your knowledge, but be clear about the source of the information.
+          - Format your response using **Markdown** where applicable (headings, lists, bold, italics, etc.), but avoid including images.
+          
+          ---
+          **START CONTEXT**  
+          ${docContext}  
+          **END CONTEXT**
+          ---
+          
+          **QUESTION:**  
+          ${latestMessage}
+          
+          Please answer in a clear and structured manner. If possible, use markdown to highlight important points.
+          
+          `
+          };
 
         const response = await streamText({
             model: openai("gpt-4"),
