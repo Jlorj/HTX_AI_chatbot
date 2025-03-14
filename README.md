@@ -18,15 +18,15 @@ Docker (for containerization)
 
 ## Installation
 
-Clone the repository:
+1. Clone the repository:
 
     git clone https://github.com/Jlorj/HTX_AI_chatbot.git
 
-Install dependencies:
+2. Install dependencies:
 
     npm install
 
-Create a .env file in the root directory with the following:
+3. Create a .env file in the root directory with the following:
 
     OPENAI_API_KEY=your_openai_api_key
     ASTRA_DB_NAMESPACE=your_astra_db_namespace
@@ -34,7 +34,7 @@ Create a .env file in the root directory with the following:
     ASTRA_DB_API_ENDPOINT=your_astra_db_api_endpoint
     ASTRA_DB_APPLICATION_TOKEN=your_astra_db_application_token
 
-Place all local PDF files in the ./documents directory.
+4. Place all local PDF files in the ./documents directory.
 
 ## Running the Application Locally
 
@@ -42,13 +42,13 @@ Place all local PDF files in the ./documents directory.
 
 ## Building and Running with Docker
 
-Build the Docker image:
+1. Build the Docker image:
 
-    docker build -t mas-teda-chatbot .
+    docker build -t htx-ai-chatbot .
 
-Run the Docker container:
+2. Run the Docker container:
 
-    docker run -p 3000:3000 --env-file .env mas-teda-chatbot
+    docker run -p 3000:3000 --env-file .env htx-ai-chatbot
 
 
 ## Updating API Key
