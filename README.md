@@ -29,16 +29,34 @@ This project is a chatbot application designed to answer queries related to the 
     npm install
 ```
 
-3. Create a `.env` file in the root directory with the following:
+### 3. Create Environment Variables File
+Create a `.env` file in the root directory of the project. To make it easier for others to set up the environment, an `.env.example` file is provided:
+
 ```env
-    OPENAI_API_KEY=your_openai_api_key
-    ASTRA_DB_NAMESPACE=your_astra_db_namespace
-    ASTRA_DB_COLLECTION=your_astra_db_collection
-    ASTRA_DB_API_ENDPOINT=your_astra_db_api_endpoint
-    ASTRA_DB_APPLICATION_TOKEN=your_astra_db_application_token
+# OpenAI API Key (Required for OpenAI API integration)
+OPENAI_API_KEY=your_openai_api_key
+
+# DataStax Astra DB Namespace (The keyspace name where your collections are stored)
+ASTRA_DB_NAMESPACE=your_astra_db_namespace
+
+# DataStax Astra DB Collection Name (The collection storing your documents)
+ASTRA_DB_COLLECTION=your_astra_db_collection
+
+# DataStax Astra DB API Endpoint (The REST API endpoint URL for your database)
+ASTRA_DB_API_ENDPOINT=your_astra_db_api_endpoint
+
+# DataStax Astra DB Application Token (Your API token for authentication)
+ASTRA_DB_APPLICATION_TOKEN=your_astra_db_application_token
 ```
 
-4. Place all local PDF files in the `./documents` directory.
+> **Note:** Never share your `.env` file or commit it to your GitHub repository. Ensure `.env` is added to your `.gitignore` file.
+
+To copy the example environment file and prepare your `.env` file, run:
+```
+cp .env.example .env
+```
+
+4. Ensure you have the local PDF files in the `./documents` directory.
 
 ## Running the Application Locally
 1. Start the application:
@@ -55,5 +73,3 @@ This project is a chatbot application designed to answer queries related to the 
 
 ## Updating API Key
 To update the OpenAI API Key, modify the `.env` file and restart the application.
-
-
