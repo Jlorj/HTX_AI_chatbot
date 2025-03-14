@@ -16,12 +16,11 @@ Node.js & npm
 
 Docker (for containerization)
 
-Installation
+## Installation
 
 Clone the repository:
 
     git clone <repo_url>
-    cd mas-teda-chatbot
 
 Install dependencies:
 
@@ -66,9 +65,6 @@ Run the Docker container:
 
     docker run -p 3000:3000 --env-file .env mas-teda-chatbot
 
-Testing the Application
-
-You can test the application by sending queries using the generateResponse() function.
 
 Updating API Key
 
