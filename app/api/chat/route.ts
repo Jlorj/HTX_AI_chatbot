@@ -51,7 +51,7 @@ export async function POST(req: Request) {
 
             console.log(docContext)
 
-        } catch (err) {
+        } catch {
             console.log("Error querying db...")
             docContext = ""
         }
