@@ -15,6 +15,7 @@ Please visit: https://htx-ai-chatbot-7txk1jucg-joels-projects-e229e1c8.vercel.ap
 - Backend: API handling requests, embeddings, context retrieval, and generating responses.
 - Database: Astra DB storing document embeddings for context retrieval.
 - External APIs: OpenAI API for embeddings and text generation.
+- Deployment: Vercel for optimised production.
 
 ## RAG Architecture
 ![RAG architecture](https://github.com/Jlorj/HTX_AI_chatbot/blob/main/Architecture%20Design.jpg)
