@@ -1,5 +1,3 @@
-import { LoaderPinwheel } from "lucide-react";
-
 const LoadingBubble = () => {
     return (
         <div className="loading-bubble">
