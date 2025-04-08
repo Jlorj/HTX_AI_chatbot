@@ -1,7 +1,7 @@
 # HTX Budget 2024 AI Chatbot
 
 This project is a chatbot application designed to answer queries related to the Singapore Budget 2024 using Retrieval-Augmented Generation (RAG). The application uses DataStax (Astra DB) for document storage and OpenAI's GPT-4 for response generation. We will assume that all users of this app are English-speaking.
-Please visit: https://htx-ai-chatbot-7txk1jucg-joels-projects-e229e1c8.vercel.app/
+Please visit: https://htx-ai-chatbot-475wbjsbj-joels-projects-e229e1c8.vercel.app
 
 ## Features
 - User-friendly frontend built with Next.js.
